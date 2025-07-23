@@ -1,49 +1,314 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import { Image } from "astro:assets";
+
+import sciencePodcastLogo from "../assets/logos/science-podcast-logo.jpg";
+import aiTechPodcastLogo from "../assets/logos/ai-tech-podcast-logo.jpg";
+import aprendeEspanolPodcastLogo from "../assets/logos/aprende-espanol-podcast-logo.jpg";
+import businessPodcastLogo from "../assets/logos/business-podcast-logo.jpg";
+import devCloudPodcastLogo from "../assets/logos/dev-cloud-podcast-logo.jpg";
+import elPodcastDelViajeroLogo from "../assets/logos/el-podcast-del-viajero-logo.jpg";
+import historyPodcastLogo from "../assets/logos/history-podcast-logo.jpg";
+import learnEnglishPodcastLogo from "../assets/logos/learn-english-podcast-logo.jpg";
+import nutritionDietPodcastLogo from "../assets/logos/nutrition-diet-podcast-logo.jpg";
+import placesTravelPodcastLogo from "../assets/logos/places-travel-podcast-logo.jpg";
+import psychologyForDailyLifePodcastLogo from "../assets/logos/psychology-for-daily-life-logo.jpg";
+import tuPodcastDeCienciaLogo from "../assets/logos/tu-podcast-de-ciencia-logo.jpg";
+import tuPodcastDeEconomiaLogo from "../assets/logos/tu-podcast-de-economia-logo.jpg";
+import tuPodcastDeFisicaLogo from "../assets/logos/tu-podcast-de-fisica-logo.jpg";
+import tuPodcastDeGamingLogo from "../assets/logos/tu-podcast-de-gaming-logo.jpg";
+import tuPodcastDeHistoriaLogo from "../assets/logos/tu-podcast-de-historia-logo.jpg";
+import tuPodcastDeIAyMasLogo from "../assets/logos/tu-podcast-de-ia-y-mas.jpg";
+import tuPodcastDeNutricionLogo from "../assets/logos/tu-podcast-de-nutricion-logo.jpg";
+import tuPodcastDePsicologiaLogo from "../assets/logos/tu-podcast-de-psicologia-logo.jpg";
+import tuPodcastDeQuimicaLogo from "../assets/logos/tu-podcast-de-quimica-logo.jpg";
+
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to
-				<a href="https://docs.astro.build/">read the docs</a>
-				or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out
-				<a href="https://github.com/Charca/astro-blog-template">astro-blog-template</a>
-				by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
-	</body>
+    <head>
+        <BaseHead title={SITE_TITLE + ' - ' + SITE_DESCRIPTION} description={SITE_DESCRIPTION} />
+    </head>
+    <body class="antialiased">
+        <Header />
+        <!-- Main Content -->
+        <main class="px-4 sm:px-6 lg:px-8 pb-16">
+            <!-- English Podcasts Section -->
+            <section id="english-podcasts" class="mb-16">
+                <h2 class="font-orbitron text-3xl md:text-4xl font-bold mb-8 text-center section-title">Podcasts</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Science Podcast -->
+                    <div class="card-bg rounded-lg shadow-lg overflow-hidden p-6 flex flex-col">
+                        <div class="flex-shrink-0 mb-4 flex items-center">
+							<Image src={sciencePodcastLogo} width={160} height={160} class="h-20 w-20 rounded-full object-cover" alt="Science Podcast Logo" />
+                            <div class="ml-4">
+                                <h3 class="font-orbitron text-xl font-bold text-white">Science Podcast</h3>
+                                <p class="text-sm text-indigo-300">Your daily dose of scientific wonder</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 text-sm flex-grow">A daily podcast making complex scientific concepts accessible, from cosmology to chemistry. Perfect for curious minds.</p>
+                        <a href="https://www.youtube.com/@science-podcast-xeocast" target="_blank" rel="noopener noreferrer" class="mt-4 inline-block text-center bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-300">Listen Now</a>
+                    </div>
+
+                    <!-- Psychology for Daily Life -->
+                    <div class="card-bg rounded-lg shadow-lg overflow-hidden p-6 flex flex-col">
+                        <div class="flex-shrink-0 mb-4 flex items-center">
+							<Image src={psychologyForDailyLifePodcastLogo} width={160} height={160} class="h-20 w-20 rounded-full object-cover" alt="Psychology for Daily Life Podcast Logo" />
+                            <div class="ml-4">
+                                <h3 class="font-orbitron text-xl font-bold text-white">Psychology for Daily Life</h3>
+                                <p class="text-sm text-indigo-300">Make sense of your mind</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 text-sm flex-grow">Translates the science of the human mind into practical strategies for better relationships, productivity, and emotional management.</p>
+                        <a href="https://www.youtube.com/@psychology-yt-podcast" target="_blank" rel="noopener noreferrer" class="mt-4 inline-block text-center bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-300">Listen Now</a>
+                    </div>
+
+                    <!-- Places & Travel Podcast -->
+                    <div class="card-bg rounded-lg shadow-lg overflow-hidden p-6 flex flex-col">
+                        <div class="flex-shrink-0 mb-4 flex items-center">
+							<Image src={placesTravelPodcastLogo} width={160} height={160} class="h-20 w-20 rounded-full object-cover" alt="Places & Travel Podcast Logo" />
+                            <div class="ml-4">
+                                <h3 class="font-orbitron text-xl font-bold text-white">Places & Travel Podcast</h3>
+                                <p class="text-sm text-indigo-300">Your daily journey to captivating destinations</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 text-sm flex-grow">Daily travel inspiration, blending history, culture, and adventure to fuel your next trip or armchair exploration.</p>
+                        <a href="https://www.youtube.com/@places-travel-podcast-xeocast" target="_blank" rel="noopener noreferrer" class="mt-4 inline-block text-center bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-300">Listen Now</a>
+                    </div>
+
+                    <!-- Nutrition & Diet Podcast -->
+                    <div class="card-bg rounded-lg shadow-lg overflow-hidden p-6 flex flex-col">
+                        <div class="flex-shrink-0 mb-4 flex items-center">
+                            <Image src={nutritionDietPodcastLogo} width={160} height={160} class="h-20 w-20 rounded-full object-cover" alt="Nutrition & Diet Podcast Logo" />
+                            <div class="ml-4">
+                                <h3 class="font-orbitron text-xl font-bold text-white">Nutrition & Diet Podcast</h3>
+                                <p class="text-sm text-indigo-300">Understand the 'why' behind the 'what' to eat</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 text-sm flex-grow">Cuts through the noise of diet fads by breaking down the science of metabolism, gut health, and how food affects your body.</p>
+                        <a href="https://www.youtube.com/@nutrition-diet-podcast" target="_blank" rel="noopener noreferrer" class="mt-4 inline-block text-center bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-300">Listen Now</a>
+                    </div>
+
+                    <!-- Learn English Podcast -->
+                    <div class="card-bg rounded-lg shadow-lg overflow-hidden p-6 flex flex-col">
+                        <div class="flex-shrink-0 mb-4 flex items-center">
+                            <Image src={learnEnglishPodcastLogo} width={160} height={160} class="h-20 w-20 rounded-full object-cover" alt="Learn English Podcast Logo" />
+                            <div class="ml-4">
+                                <h3 class="font-orbitron text-xl font-bold text-white">Learn English Podcast</h3>
+                                <p class="text-sm text-indigo-300">Your daily stop for improving your English</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 text-sm flex-grow">Helps learners improve language skills with bite-sized lessons on pronunciation, conversation, and vocabulary.</p>
+                        <a href="https://www.youtube.com/@learn-english-podcast-xeocast" target="_blank" rel="noopener noreferrer" class="mt-4 inline-block text-center bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-300">Listen Now</a>
+                    </div>
+
+                    <!-- History Podcast -->
+                    <div class="card-bg rounded-lg shadow-lg overflow-hidden p-6 flex flex-col">
+                        <div class="flex-shrink-0 mb-4 flex items-center">
+                            <Image src={historyPodcastLogo} width={160} height={160} class="h-20 w-20 rounded-full object-cover" alt="History Podcast Logo" />
+                            <div class="ml-4">
+                                <h3 class="font-orbitron text-xl font-bold text-white">History Podcast</h3>
+                                <p class="text-sm text-indigo-300">Bringing the past to life</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 text-sm flex-grow">Brings the past to life with stories of great civilizations, pivotal wars, and revolutionary movements.</p>
+                        <a href="https://www.youtube.com/@history-podcast-xeocast" target="_blank" rel="noopener noreferrer" class="mt-4 inline-block text-center bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-300">Listen Now</a>
+                    </div>
+
+                    <!-- Dev & Cloud Podcast -->
+                    <div class="card-bg rounded-lg shadow-lg overflow-hidden p-6 flex flex-col">
+                        <div class="flex-shrink-0 mb-4 flex items-center">
+                            <Image src={devCloudPodcastLogo} width={160} height={160} class="h-20 w-20 rounded-full object-cover" alt="Dev & Cloud Podcast Logo" />
+                            <div class="ml-4">
+                                <h3 class="font-orbitron text-xl font-bold text-white">Dev & Cloud Podcast</h3>
+                                <p class="text-sm text-indigo-300">Your daily dive into software and tech</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 text-sm flex-grow">Daily insights on design patterns, programming languages, DevOps, SRE, and emerging tech trends like AI and blockchain.</p>
+                        <a href="https://www.youtube.com/@dev-cloud-podcast-xeocast" target="_blank" rel="noopener noreferrer" class="mt-4 inline-block text-center bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-300">Listen Now</a>
+                    </div>
+
+                    <!-- Business Podcast -->
+                    <div class="card-bg rounded-lg shadow-lg overflow-hidden p-6 flex flex-col">
+                        <div class="flex-shrink-0 mb-4 flex items-center">
+                            <Image src={businessPodcastLogo} width={160} height={160} class="h-20 w-20 rounded-full object-cover" alt="Business Podcast Logo" />
+                            <div class="ml-4">
+                                <h3 class="font-orbitron text-xl font-bold text-white">Business Podcast</h3>
+                                <p class="text-sm text-indigo-300">Your guide to startups, finance, and marketing</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 text-sm flex-grow">Daily, actionable insights on entrepreneurship, finance, marketing, and leadership for aspiring professionals.</p>
+                        <a href="https://www.youtube.com/@business-podcast-xeocast" target="_blank" rel="noopener noreferrer" class="mt-4 inline-block text-center bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-300">Listen Now</a>
+                    </div>
+
+                    <!-- AI & Tech Podcast -->
+                    <div class="card-bg rounded-lg shadow-lg overflow-hidden p-6 flex flex-col">
+                        <div class="flex-shrink-0 mb-4 flex items-center">
+                            <Image src={aiTechPodcastLogo} width={160} height={160} class="h-20 w-20 rounded-full object-cover" alt="AI & Tech Podcast Logo" />
+                            <div class="ml-4">
+                                <h3 class="font-orbitron text-xl font-bold text-white">AI & Tech Podcast</h3>
+                                <p class="text-sm text-indigo-300">Explore the fascinating world of AI</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 text-sm flex-grow">Daily explorations into how AI is transforming our lives, from healthcare and education to ethics and business.</p>
+                        <a href="https://www.youtube.com/@ai-tech-podcast-xeocast" target="_blank" rel="noopener noreferrer" class="mt-4 inline-block text-center bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-300">Listen Now</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Spanish Podcasts Section -->
+            <section id="spanish-podcasts">
+                <h2 class="font-orbitron text-3xl md:text-4xl font-bold mb-8 text-center section-title">Podcasts en Español</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Tu Podcast de Química -->
+                    <div class="card-bg rounded-lg shadow-lg overflow-hidden p-6 flex flex-col">
+                        <div class="flex-shrink-0 mb-4 flex items-center">
+                            <Image src={tuPodcastDeQuimicaLogo} width={160} height={160} class="h-20 w-20 rounded-full object-cover" alt="Tu Podcast de Química Logo" />
+                            <div class="ml-4">
+                                <h3 class="font-orbitron text-xl font-bold text-white">Tu Podcast de Química</h3>
+                                <p class="text-sm text-indigo-300">Donde los elementos cobran vida</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 text-sm flex-grow">Desglosamos la química para que entiendas el mundo, explorando su historia, pioneros y los avances que modelan el futuro.</p>
+                        <a href="https://www.youtube.com/@tu-podcast-quimica" target="_blank" rel="noopener noreferrer" class="mt-4 inline-block text-center bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-300">Escuchar Ahora</a>
+                    </div>
+
+                    <!-- Tu Podcast de Psicología -->
+                    <div class="card-bg rounded-lg shadow-lg overflow-hidden p-6 flex flex-col">
+                        <div class="flex-shrink-0 mb-4 flex items-center">
+                            <Image src={tuPodcastDePsicologiaLogo} width={160} height={160} class="h-20 w-20 rounded-full object-cover" alt="Tu Podcast de Psicología Logo" />
+                            <div class="ml-4">
+                                <h3 class="font-orbitron text-xl font-bold text-white">Tu Podcast de Psicología</h3>
+                                <p class="text-sm text-indigo-300">Donde la mente se desvela</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 text-sm flex-grow">Herramientas prácticas para entender tus pensamientos, gestionar emociones y fortalecer tu bienestar personal.</p>
+                        <a href="https://www.youtube.com/@tu-podcast-psicologia" target="_blank" rel="noopener noreferrer" class="mt-4 inline-block text-center bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-300">Escuchar Ahora</a>
+                    </div>
+
+                    <!-- Tu Podcast de Nutrición -->
+                    <div class="card-bg rounded-lg shadow-lg overflow-hidden p-6 flex flex-col">
+                        <div class="flex-shrink-0 mb-4 flex items-center">
+                            <Image src={tuPodcastDeNutricionLogo} width={160} height={160} class="h-20 w-20 rounded-full object-cover" alt="Tu Podcast de Nutrición Logo" />
+                            <div class="ml-4">
+                                <h3 class="font-orbitron text-xl font-bold text-white">Tu Podcast de Nutrición</h3>
+                                <p class="text-sm text-indigo-300">Donde la nutrición es tu medicina</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 text-sm flex-grow">Desmitifica dietas y te guía en la creación de hábitos alimenticios sostenibles para una vida más saludable.</p>
+                        <a href="https://www.youtube.com/@tu-podcast-nutricion" target="_blank" rel="noopener noreferrer" class="mt-4 inline-block text-center bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-300">Escuchar Ahora</a>
+                    </div>
+
+                    <!-- Tu Podcast de IA y más -->
+                    <div class="card-bg rounded-lg shadow-lg overflow-hidden p-6 flex flex-col">
+                        <div class="flex-shrink-0 mb-4 flex items-center">
+                            <Image src={tuPodcastDeIAyMasLogo} width={160} height={160} class="h-20 w-20 rounded-full object-cover" alt="Tu Podcast de IA y más Logo" />
+                            <div class="ml-4">
+                                <h3 class="font-orbitron text-xl font-bold text-white">Tu Podcast de IA y más</h3>
+                                <p class="text-sm text-indigo-300">Comprende el universo de la IA</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 text-sm flex-grow">Desglosa los conceptos clave de la Inteligencia Artificial, sus herramientas innovadoras y las últimas noticias del sector.</p>
+                        <a href="https://www.youtube.com/@tu-podcast-ia" target="_blank" rel="noopener noreferrer" class="mt-4 inline-block text-center bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-300">Escuchar Ahora</a>
+                    </div>
+
+                    <!-- Tu Podcast de Historia -->
+                    <div class="card-bg rounded-lg shadow-lg overflow-hidden p-6 flex flex-col">
+                        <div class="flex-shrink-0 mb-4 flex items-center">
+                            <Image src={tuPodcastDeHistoriaLogo} width={160} height={160} class="h-20 w-20 rounded-full object-cover" alt="Tu Podcast de Historia Logo" />
+                            <div class="ml-4">
+                                <h3 class="font-orbitron text-xl font-bold text-white">Tu Podcast de Historia</h3>
+                                <p class="text-sm text-indigo-300">Donde el pasado cobra vida</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 text-sm flex-grow">Explora la historia mundial, desde imperios ancestrales hasta los eventos que moldearon el siglo XX.</p>
+                        <a href="https://www.youtube.com/@tu-podcast-historia" target="_blank" rel="noopener noreferrer" class="mt-4 inline-block text-center bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-300">Escuchar Ahora</a>
+                    </div>
+
+                    <!-- Tu Podcast de Gaming -->
+                    <div class="card-bg rounded-lg shadow-lg overflow-hidden p-6 flex flex-col">
+                        <div class="flex-shrink-0 mb-4 flex items-center">
+                            <Image src={tuPodcastDeGamingLogo} width={160} height={160} class="h-20 w-20 rounded-full object-cover" alt="Tu Podcast de Gaming Logo" />
+                            <div class="ml-4">
+                                <h3 class="font-orbitron text-xl font-bold text-white">Tu Podcast de Gaming</h3>
+                                <p class="text-sm text-indigo-300">Donde cada pixel cuenta una historia</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 text-sm flex-grow">Crónicas de videojuegos históricos, consolas legendarias, reviews de lanzamientos y las noticias más relevantes del universo gamer.</p>
+                        <a href="https://www.youtube.com/@tu-podcast-gaming" target="_blank" rel="noopener noreferrer" class="mt-4 inline-block text-center bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-300">Escuchar Ahora</a>
+                    </div>
+
+                    <!-- Tu Podcast de Física -->
+                    <div class="card-bg rounded-lg shadow-lg overflow-hidden p-6 flex flex-col">
+                        <div class="flex-shrink-0 mb-4 flex items-center">
+                            <Image src={tuPodcastDeFisicaLogo} width={160} height={160} class="h-20 w-20 rounded-full object-cover" alt="Tu Podcast de Física Logo" />
+                            <div class="ml-4">
+                                <h3 class="font-orbitron text-xl font-bold text-white">Tu Podcast de Física</h3>
+                                <p class="text-sm text-indigo-300">Donde el universo revela sus secretos</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 text-sm flex-grow">Desglosa conceptos complejos de la física, explora su historia y te mantiene al día con las últimas noticias.</p>
+                        <a href="https://www.youtube.com/@tu-podcast-fisica" target="_blank" rel="noopener noreferrer" class="mt-4 inline-block text-center bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-300">Escuchar Ahora</a>
+                    </div>
+
+                    <!-- Tu Podcast de Economía -->
+                    <div class="card-bg rounded-lg shadow-lg overflow-hidden p-6 flex flex-col">
+                        <div class="flex-shrink-0 mb-4 flex items-center">
+                            <Image src={tuPodcastDeEconomiaLogo} width={160} height={160} class="h-20 w-20 rounded-full object-cover" alt="Tu Podcast de Economía Logo" />
+                            <div class="ml-4">
+                                <h3 class="font-orbitron text-xl font-bold text-white">Tu Podcast de Economía</h3>
+                                <p class="text-sm text-indigo-300">Donde la economía se vuelve clara</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 text-sm flex-grow">Desentraña la economía, explora el emprendimiento y te equipa para tomar decisiones financieras inteligentes.</p>
+                        <a href="https://www.youtube.com/@tu-podcast-economia" target="_blank" rel="noopener noreferrer" class="mt-4 inline-block text-center bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-300">Escuchar Ahora</a>
+                    </div>
+
+                    <!-- Tu Podcast de Ciencia -->
+                    <div class="card-bg rounded-lg shadow-lg overflow-hidden p-6 flex flex-col">
+                        <div class="flex-shrink-0 mb-4 flex items-center">
+                            <Image src={tuPodcastDeCienciaLogo} width={160} height={160} class="h-20 w-20 rounded-full object-cover" alt="Tu Podcast de Ciencia Logo" />
+                            <div class="ml-4">
+                                <h3 class="font-orbitron text-xl font-bold text-white">Tu Podcast de Ciencia</h3>
+                                <p class="text-sm text-indigo-300">Donde la curiosidad despierta el universo</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 text-sm flex-grow">Explora la ciencia en general, desde descubrimientos antiguos hasta las innovaciones que están por venir.</p>
+                        <a href="https://www.youtube.com/@tu-podcast-ciencia" target="_blank" rel="noopener noreferrer" class="mt-4 inline-block text-center bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-300">Escuchar Ahora</a>
+                    </div>
+
+                    <!-- El Podcast del viajero -->
+                    <div class="card-bg rounded-lg shadow-lg overflow-hidden p-6 flex flex-col">
+                        <div class="flex-shrink-0 mb-4 flex items-center">
+                            <Image src={elPodcastDelViajeroLogo} width={160} height={160} class="h-20 w-20 rounded-full object-cover" alt="El Podcast del viajero Logo" />
+                            <div class="ml-4">
+                                <h3 class="font-orbitron text-xl font-bold text-white">El Podcast del viajero</h3>
+                                <p class="text-sm text-indigo-300">Donde cada destino es una historia</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 text-sm flex-grow">Te lleva a los lugares más asombrosos del mundo, inspirándote para tu próxima gran aventura.</p>
+                        <a href="https://www.youtube.com/@el-podcast-viajero" target="_blank" rel="noopener noreferrer" class="mt-4 inline-block text-center bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-300">Escuchar Ahora</a>
+                    </div>
+
+                    <!-- Aprende Español Podcast -->
+                    <div class="card-bg rounded-lg shadow-lg overflow-hidden p-6 flex flex-col">
+                        <div class="flex-shrink-0 mb-4 flex items-center">
+                            <Image src={aprendeEspanolPodcastLogo} width={160} height={160} class="h-20 w-20 rounded-full object-cover" alt="Aprende Español Podcast Logo" />
+                            <div class="ml-4">
+                                <h3 class="font-orbitron text-xl font-bold text-white">Aprende Español Podcast</h3>
+                                <p class="text-sm text-indigo-300">El lugar donde cada episodio te acerca más a la fluidez</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 text-sm flex-grow">Series temáticas para estudiantes de español de todos los niveles, cubriendo gramática, vocabulario y cultura.</p>
+                        <a href="https://www.youtube.com/@aprende-espanol-xeocast" target="_blank" rel="noopener noreferrer" class="mt-4 inline-block text-center bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-300">Escuchar Ahora</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <Footer />
+    </body>
 </html>
