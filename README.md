@@ -1,4 +1,4 @@
-# Astro Starter Kit: Blog
+# XeoCast
 
 ```sh
 npm create astro@latest -- --template blog
